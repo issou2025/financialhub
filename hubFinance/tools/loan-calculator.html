@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulateur de crédit (personnel, auto) pour estimer vos mensualités et le coût total de votre emprunt.">
+    <title>Simulateur de Crédit - Personal Finance Hub</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialProduct",
+        "name": "Simulateur de Crédit",
+        "description": "Estimez les paiements mensuels et le coût total pour différents types de crédits (personnel, auto).",
+        "brand": {
+            "@type": "Brand",
+            "name": "Personal Finance Hub"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="/" class="breadcrumbs__link">Accueil</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="/tools/" class="breadcrumbs__link">Outils</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Simulateur de Crédit</span>
+                </nav>
+
+                <div class="calculator-container">
+                    <form class="calculator-form" id="loan-calculator">
+                        <h1 class="calculator-form__title">Simulateur de Crédit</h1>
+                        <div class="form__group">
+                            <label for="loanAmount" class="form__label">Montant du crédit (€)</label>
+                            <input type="number" id="loanAmount" name="loanAmount" class="form__input" required min="100">
+                        </div>
+                        <div class="form__group">
+                            <label for="interestRate" class="form__label">Taux d'intérêt annuel (%)</label>
+                            <input type="number" id="interestRate" name="interestRate" class="form__input" required min="0" step="0.01">
+                        </div>
+                        <div class="form__group">
+                            <label for="loanTerm" class="form__label">Durée (années)</label>
+                            <input type="number" id="loanTerm" name="loanTerm" class="form__input" required min="1">
+                        </div>
+                        <button type="submit" class="btn btn--primary">Calculer</button>
+                    </form>
+                    <div id="loan-results" class="calculator-results-wrapper" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/calculators.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/includes/header.html').then(r => r.text()).then(d => document.getElementById('header-placeholder').innerHTML = d);
+            fetch('/includes/footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+        });
+    </script>
+</body>
+</html> 

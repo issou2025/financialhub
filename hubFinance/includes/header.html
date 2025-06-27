@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <div class="header__logo">
+                <a href="/" class="logo">
+                    <img src="/img/logo.svg" alt="Personal Finance Hub Logo" class="logo__image">
+                    <span class="logo__text">Finance Hub</span>
+                </a>
+            </div>
+            <div id="nav-placeholder"></div>
+            <button class="header__mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+<script>
+    fetch('/includes/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script> 

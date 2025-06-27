@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulateur de prêt immobilier gratuit pour calculer vos mensualités, le coût total du crédit et votre capacité d'emprunt.">
+    <title>Simulateur de Prêt Immobilier - Personal Finance Hub</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialProduct",
+        "name": "Simulateur de Prêt Immobilier",
+        "description": "Calculez les mensualités, le coût total, et le tableau d'amortissement de votre prêt immobilier.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Personal Finance Hub"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "additionalType": "http://www.productontology.org/id/Mortgage_calculator"
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="/" class="breadcrumbs__link">Accueil</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="/tools/" class="breadcrumbs__link">Outils</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Simulateur de Prêt Immobilier</span>
+                </nav>
+                
+                <div class="calculator-container">
+                    <div class="calculator-form-wrapper">
+                        <form class="calculator-form" id="mortgage-calculator">
+                            <h1 class="calculator-form__title">Simulateur de Prêt Immobilier</h1>
+                            <p class="calculator-form__description">Estimez vos paiements mensuels et le coût total de votre crédit.</p>
+                            
+                            <div class="form__group">
+                                <label for="loanAmount" class="form__label">Montant du prêt (€)</label>
+                                <input type="number" id="loanAmount" name="loanAmount" class="form__input" required min="1000">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="interestRate" class="form__label">Taux d'intérêt annuel (%)</label>
+                                <input type="number" id="interestRate" name="interestRate" class="form__input" required min="0" max="20" step="0.01">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="loanTerm" class="form__label">Durée du prêt (années)</label>
+                                <input type="number" id="loanTerm" name="loanTerm" class="form__input" required min="1" max="30">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="downPayment" class="form__label">Apport personnel (€, optionnel)</label>
+                                <input type="number" id="downPayment" name="downPayment" class="form__input" min="0">
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--large">Calculer</button>
+                        </form>
+                    </div>
+
+                    <div class="calculator-results-wrapper">
+                        <div id="mortgage-results" style="display: none;">
+                            <!-- Les résultats du calcul seront injectés ici par JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-block">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="section section--alt">
+            <div class="container">
+                <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
+                <div class="faq">
+                    <!-- FAQ Items -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/calculators.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Charger les composants header et footer
+            fetch('/includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                    initMobileNavigation();
+                });
+
+            fetch('/includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html> 

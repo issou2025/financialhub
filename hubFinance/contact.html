@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Personal Finance Hub</title>
+    <meta name="description" content="Get in touch with the Personal Finance Hub team for questions, suggestions, or support with our financial tools and resources.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us - Personal Finance Hub">
+    <meta property="og:description" content="Get in touch with the Personal Finance Hub team for questions, suggestions, or support with our financial tools and resources.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://personalfinancehub.com/contact.html">
+    <meta property="og:image" content="/img/hero-finance.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Personal Finance Hub">
+    <meta name="twitter:description" content="Get in touch with the Personal Finance Hub team for questions, suggestions, or support with our financial tools and resources.">
+    <meta name="twitter:image" content="/img/hero-finance.jpg">
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Personal Finance Hub",
+        "description": "Get in touch with the Personal Finance Hub team",
+        "url": "https://personalfinancehub.com/contact.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Personal Finance Hub",
+            "url": "https://personalfinancehub.com",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "availableLanguage": "English"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="/" class="logo">
+                        <img src="/img/logo.svg" alt="Personal Finance Hub Logo" class="logo__image">
+                        <span class="logo__text">Finance Hub</span>
+                    </a>
+                </div>
+                
+                <nav class="nav nav--header">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="/tools/" class="nav__link">Tools</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/credit-cards/" class="nav__link">Credit Cards</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/saving/" class="nav__link">Saving</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/investing/" class="nav__link">Investing</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/taxes/" class="nav__link">Taxes</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link nav__link--active">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <button class="header__mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <nav class="breadcrumbs__nav" aria-label="Breadcrumb">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__link">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current">
+                            <span class="breadcrumbs__text">Contact Us</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header__content">
+                    <h1 class="page-header__title">Contact Us</h1>
+                    <p class="page-header__description">
+                        Have a question, suggestion, or need help with our financial tools? We'd love to hear from you.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-content__grid">
+                    <div class="contact-content__main">
+                        <div class="contact-form-section">
+                            <h2 class="contact-form-section__title">Send us a Message</h2>
+                            <p class="contact-form-section__description">
+                                Fill out the form below and we'll get back to you as soon as possible.
+                            </p>
+                            
+                            <form class="contact-form" id="contact-form">
+                                <div class="contact-form__row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-group__label">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-group__input" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-group__label">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-group__input" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-group__label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-group__input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-group__label">Subject *</label>
+                                    <select id="subject" name="subject" class="form-group__select" required>
+                                        <option value="">Please select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="tools">Tool Support</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="press">Press Inquiry</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-group__label">Message *</label>
+                                    <textarea id="message" name="message" class="form-group__textarea" rows="6" placeholder="Please provide details about your inquiry..." required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="checkbox-label__input" required>
+                                        <span class="checkbox-label__checkmark"></span>
+                                        <span class="checkbox-label__text">I agree to the <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a> *</span>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn--primary btn--large">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="contact-content__sidebar">
+                        <div class="contact-info">
+                            <h3 class="contact-info__title">Get in Touch</h3>
+                            <p class="contact-info__description">
+                                We're here to help you make the most of your financial journey. Here are other ways to reach us:
+                            </p>
+                            
+                            <div class="contact-info__item">
+                                <h4 class="contact-info__item-title">Response Time</h4>
+                                <p class="contact-info__item-text">
+                                    We typically respond to all inquiries within 24-48 hours during business days.
+                                </p>
+                            </div>
+                            
+                            <div class="contact-info__item">
+                                <h4 class="contact-info__item-title">Tool Support</h4>
+                                <p class="contact-info__item-text">
+                                    Having trouble with one of our calculators? Let us know which tool you're using and describe the issue.
+                                </p>
+                            </div>
+                            
+                            <div class="contact-info__item">
+                                <h4 class="contact-info__item-title">Content Suggestions</h4>
+                                <p class="contact-info__item-text">
+                                    Have an idea for a new tool or guide? We'd love to hear your suggestions for improving our platform.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- AdSense Block -->
+                        <div class="ad-block ad-block--sidebar">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-XXXXXXXXXX"
+                                 data-ad-slot="XXXXXXXXXX"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-section__header">
+                    <h2 class="faq-section__title">Frequently Asked Questions</h2>
+                    <p class="faq-section__description">
+                        Find quick answers to common questions before reaching out.
+                    </p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Are your financial tools really free to use?</span>
+                            <span class="faq-item__icon"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Yes, all our financial calculators and tools are completely free to use. We believe everyone should have access to quality financial planning tools regardless of their financial situation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>How accurate are your calculators?</span>
+                            <span class="faq-item__icon"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Our calculators use industry-standard formulas and are regularly updated to ensure accuracy. However, results should be used as estimates and you should consult with a financial professional for personalized advice.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Do you store my personal financial information?</span>
+                            <span class="faq-item__icon"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>No, we do not store any personal financial information you enter into our calculators. All calculations are performed locally in your browser for your privacy and security.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-item__question" aria-expanded="false">
+                            <span>Can you provide personalized financial advice?</span>
+                            <span class="faq-item__icon"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>We provide educational content and tools, but we cannot provide personalized financial advice. For specific financial planning needs, we recommend consulting with a qualified financial advisor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section footer__section--main">
+                    <div class="footer__logo">
+                        <a href="/" class="logo">
+                            <img src="/img/logo.svg" alt="Personal Finance Hub Logo" class="logo__image">
+                            <span class="logo__text">Finance Hub</span>
+                        </a>
+                    </div>
+                    <p class="footer__description">
+                        Your trusted partner for personal financial management. Make informed decisions with our free tools and expert guides.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <img src="/img/icons/facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <img src="/img/icons/twitter.svg" alt="Twitter">
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <img src="/img/icons/linkedin.svg" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Tools</h3>
+                    <ul class="footer__links">
+                        <li><a href="/tools/mortgage-calculator.html" class="footer__link">Mortgage Calculator</a></li>
+                        <li><a href="/tools/loan-calculator.html" class="footer__link">Loan Calculator</a></li>
+                        <li><a href="/tools/budget-planner.html" class="footer__link">Budget Planner</a></li>
+                        <li><a href="/tools/retirement-calculator.html" class="footer__link">Retirement Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Resources</h3>
+                    <ul class="footer__links">
+                        <li><a href="/credit-cards/" class="footer__link">Credit Cards</a></li>
+                        <li><a href="/saving/" class="footer__link">Saving</a></li>
+                        <li><a href="/investing/" class="footer__link">Investing</a></li>
+                        <li><a href="/taxes/" class="footer__link">Taxes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Company</h3>
+                    <ul class="footer__links">
+                        <li><a href="/about.html" class="footer__link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        <li><a href="/privacy.html" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer__link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 Personal Finance Hub. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    
+    <!-- AdSense -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html> 

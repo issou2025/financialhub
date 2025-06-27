@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Growth Calculator - Personal Finance Hub</title>
+    <meta name="description" content="Calculate compound growth, analyze investment returns, and compare different investment strategies. Free advanced investment calculator with detailed projections.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Investment Growth Calculator",
+        "description": "Calculate compound growth, analyze investment returns, and compare different investment strategies over time.",
+        "url": "https://financehub.com/tools/investment-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="/" class="logo">
+                        <img src="/img/logo.svg" alt="Personal Finance Hub Logo" class="logo__image">
+                        <span class="logo__text">Finance Hub</span>
+                    </a>
+                </div>
+                
+                <nav class="nav nav--header">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="/tools/" class="nav__link nav__link--active">Tools</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/credit-cards/" class="nav__link">Credit Cards</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/saving/" class="nav__link">Saving</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/investing/" class="nav__link">Investing</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/taxes/" class="nav__link">Taxes</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/about.html" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <button class="header__mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Calculator Hero -->
+        <section class="calculator-hero">
+            <div class="calculator-hero__background">
+                <div class="calculator-hero__gradient"></div>
+                <div class="calculator-hero__particles">
+                    <div class="particle particle--1"></div>
+                    <div class="particle particle--2"></div>
+                    <div class="particle particle--3"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="calculator-hero__content">
+                    <div class="calculator-hero__badge">
+                        <span class="badge badge--primary">📈 Investment Tool</span>
+                    </div>
+                    <h1 class="calculator-hero__title">
+                        Investment <span class="text-gradient">Growth Calculator</span>
+                    </h1>
+                    <p class="calculator-hero__description">
+                        Calculate compound growth, analyze investment returns, and compare different investment strategies over time with our advanced calculator.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-layout">
+                    <!-- Calculator Form -->
+                    <div class="calculator-form glass-premium">
+                        <div class="calculator-form__header">
+                            <h2 class="calculator-form__title">Investment Parameters</h2>
+                            <p class="calculator-form__description">Enter your investment details to calculate growth projections</p>
+                        </div>
+
+                        <form id="investmentForm" class="calculator-form__form">
+                            <div class="form-group">
+                                <label for="initialInvestment" class="form-label">
+                                    <span class="form-label__text">Initial Investment</span>
+                                    <span class="form-label__icon">💰</span>
+                                </label>
+                                <div class="form-input-wrapper">
+                                    <span class="form-input__prefix">$</span>
+                                    <input type="number" id="initialInvestment" class="form-input" value="10000" min="0" step="100" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="monthlyContribution" class="form-label">
+                                    <span class="form-label__text">Monthly Contribution</span>
+                                    <span class="form-label__icon">🔄</span>
+                                </label>
+                                <div class="form-input-wrapper">
+                                    <span class="form-input__prefix">$</span>
+                                    <input type="number" id="monthlyContribution" class="form-input" value="500" min="0" step="50" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="annualReturn" class="form-label">
+                                    <span class="form-label__text">Expected Annual Return</span>
+                                    <span class="form-label__icon">📊</span>
+                                </label>
+                                <div class="form-input-wrapper">
+                                    <input type="number" id="annualReturn" class="form-input" value="7" min="0" max="50" step="0.1" required>
+                                    <span class="form-input__suffix">%</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="investmentPeriod" class="form-label">
+                                    <span class="form-label__text">Investment Period</span>
+                                    <span class="form-label__icon">⏰</span>
+                                </label>
+                                <div class="form-input-wrapper">
+                                    <input type="number" id="investmentPeriod" class="form-input" value="20" min="1" max="50" step="1" required>
+                                    <span class="form-input__suffix">years</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="compoundFrequency" class="form-label">
+                                    <span class="form-label__text">Compound Frequency</span>
+                                    <span class="form-label__icon">🔄</span>
+                                </label>
+                                <select id="compoundFrequency" class="form-select" required>
+                                    <option value="1">Annually</option>
+                                    <option value="2">Semi-annually</option>
+                                    <option value="4">Quarterly</option>
+                                    <option value="12" selected>Monthly</option>
+                                    <option value="365">Daily</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inflationRate" class="form-label">
+                                    <span class="form-label__text">Inflation Rate (Optional)</span>
+                                    <span class="form-label__icon">📈</span>
+                                </label>
+                                <div class="form-input-wrapper">
+                                    <input type="number" id="inflationRate" class="form-input" value="2.5" min="0" max="20" step="0.1">
+                                    <span class="form-input__suffix">%</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--large btn--full-width">
+                                <span>📊</span>
+                                Calculate Investment Growth
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="calculator-results glass-premium" id="investmentResults" style="display: none;">
+                        <div class="calculator-results__header">
+                            <h2 class="calculator-results__title">Investment Projection</h2>
+                            <div class="calculator-results__badge">
+                                <span class="badge badge--success">Results Ready</span>
+                            </div>
+                        </div>
+
+                        <div class="results-summary">
+                            <div class="result-card result-card--primary">
+                                <div class="result-card__icon">💎</div>
+                                <div class="result-card__content">
+                                    <div class="result-card__label">Final Value</div>
+                                    <div class="result-card__value" id="finalValue">$0</div>
+                                </div>
+                            </div>
+
+                            <div class="result-card result-card--success">
+                                <div class="result-card__icon">📈</div>
+                                <div class="result-card__content">
+                                    <div class="result-card__label">Total Contributions</div>
+                                    <div class="result-card__value" id="totalContributions">$0</div>
+                                </div>
+                            </div>
+
+                            <div class="result-card result-card--warning">
+                                <div class="result-card__icon">💰</div>
+                                <div class="result-card__content">
+                                    <div class="result-card__label">Investment Gains</div>
+                                    <div class="result-card__value" id="investmentGains">$0</div>
+                                </div>
+                            </div>
+
+                            <div class="result-card result-card--info">
+                                <div class="result-card__icon">🔥</div>
+                                <div class="result-card__content">
+                                    <div class="result-card__label">Inflation-Adjusted Value</div>
+                                    <div class="result-card__value" id="inflationAdjustedValue">$0</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="results-details">
+                            <div class="results-tabs">
+                                <button class="results-tab results-tab--active" data-tab="breakdown">Breakdown</button>
+                                <button class="results-tab" data-tab="projections">Year-by-Year</button>
+                                <button class="results-tab" data-tab="comparison">Scenarios</button>
+                            </div>
+
+                            <div class="results-content">
+                                <div class="results-panel results-panel--active" id="breakdown">
+                                    <div class="breakdown-chart">
+                                        <h3 class="breakdown-chart__title">Investment Composition</h3>
+                                        <div class="breakdown-items">
+                                            <div class="breakdown-item">
+                                                <div class="breakdown-item__label">
+                                                    <span class="breakdown-item__color breakdown-item__color--primary"></span>
+                                                    Initial Investment
+                                                </div>
+                                                <div class="breakdown-item__value" id="initialContribution">$0</div>
+                                            </div>
+                                            <div class="breakdown-item">
+                                                <div class="breakdown-item__label">
+                                                    <span class="breakdown-item__color breakdown-item__color--success"></span>
+                                                    Monthly Contributions
+                                                </div>
+                                                <div class="breakdown-item__value" id="monthlyContributions">$0</div>
+                                            </div>
+                                            <div class="breakdown-item">
+                                                <div class="breakdown-item__label">
+                                                    <span class="breakdown-item__color breakdown-item__color--warning"></span>
+                                                    Compound Interest
+                                                </div>
+                                                <div class="breakdown-item__value" id="compoundInterest">$0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="results-panel" id="projections">
+                                    <div class="projections-table">
+                                        <h3 class="projections-table__title">Year-by-Year Growth</h3>
+                                        <div class="table-wrapper">
+                                            <table class="data-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Year</th>
+                                                        <th>Balance</th>
+                                                        <th>Contributions</th>
+                                                        <th>Interest Earned</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="projectionsTableBody">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="results-panel" id="comparison">
+                                    <div class="comparison-scenarios">
+                                        <h3 class="comparison-scenarios__title">Investment Scenarios</h3>
+                                        <div class="scenario-cards">
+                                            <div class="scenario-card">
+                                                <h4 class="scenario-card__title">Conservative (5% return)</h4>
+                                                <div class="scenario-card__value" id="conservativeScenario">$0</div>
+                                            </div>
+                                            <div class="scenario-card scenario-card--active">
+                                                <h4 class="scenario-card__title">Current Scenario</h4>
+                                                <div class="scenario-card__value" id="currentScenario">$0</div>
+                                            </div>
+                                            <div class="scenario-card">
+                                                <h4 class="scenario-card__title">Aggressive (10% return)</h4>
+                                                <div class="scenario-card__value" id="aggressiveScenario">$0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Tips -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="tips-section__header">
+                    <h2 class="tips-section__title">Investment Tips</h2>
+                    <p class="tips-section__description">Maximize your investment returns with these expert strategies</p>
+                </div>
+
+                <div class="tips-grid">
+                    <div class="tip-card glass-premium">
+                        <div class="tip-card__icon">🎯</div>
+                        <h3 class="tip-card__title">Start Early</h3>
+                        <p class="tip-card__description">
+                            The power of compound interest grows exponentially over time. Starting early gives your investments more time to grow.
+                        </p>
+                    </div>
+
+                    <div class="tip-card glass-premium">
+                        <div class="tip-card__icon">📊</div>
+                        <h3 class="tip-card__title">Diversify Your Portfolio</h3>
+                        <p class="tip-card__description">
+                            Spread your investments across different asset classes to reduce risk and potentially increase returns.
+                        </p>
+                    </div>
+
+                    <div class="tip-card glass-premium">
+                        <div class="tip-card__icon">🔄</div>
+                        <h3 class="tip-card__title">Regular Contributions</h3>
+                        <p class="tip-card__description">
+                            Consistent monthly contributions through dollar-cost averaging can help smooth out market volatility.
+                        </p>
+                    </div>
+
+                    <div class="tip-card glass-premium">
+                        <div class="tip-card__icon">⏰</div>
+                        <h3 class="tip-card__title">Long-term Perspective</h3>
+                        <p class="tip-card__description">
+                            Stay focused on your long-term goals and avoid making emotional decisions based on short-term market fluctuations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="related-tools">
+            <div class="container">
+                <h2 class="related-tools__title">Related Financial Tools</h2>
+                <div class="related-tools__grid">
+                    <a href="/tools/retirement-calculator.html" class="related-tool-card glass-premium">
+                        <div class="related-tool-card__icon">
+                            <img src="/img/icons/chart.svg" alt="Retirement Calculator">
+                        </div>
+                        <h3 class="related-tool-card__title">Retirement Calculator</h3>
+                        <p class="related-tool-card__description">Plan your retirement savings strategy</p>
+                    </a>
+
+                    <a href="/tools/net-worth-calculator.html" class="related-tool-card glass-premium">
+                        <div class="related-tool-card__icon">
+                            <img src="/img/icons/chart.svg" alt="Net Worth Tracker">
+                        </div>
+                        <h3 class="related-tool-card__title">Net Worth Tracker</h3>
+                        <p class="related-tool-card__description">Track your financial progress</p>
+                    </a>
+
+                    <a href="/tools/budget-planner.html" class="related-tool-card glass-premium">
+                        <div class="related-tool-card__icon">
+                            <img src="/img/icons/piggy-bank.svg" alt="Budget Planner">
+                        </div>
+                        <h3 class="related-tool-card__title">Budget Planner</h3>
+                        <p class="related-tool-card__description">Create and manage your budget</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section footer__section--main">
+                    <div class="footer__logo">
+                        <a href="/" class="logo">
+                            <img src="/img/logo.svg" alt="Personal Finance Hub Logo" class="logo__image">
+                            <span class="logo__text">Finance Hub</span>
+                        </a>
+                    </div>
+                    <p class="footer__description">
+                        Your trusted partner for personal financial management. Make informed decisions with our free tools and expert guides.
+                    </p>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Financial Tools</h3>
+                    <ul class="footer__links">
+                        <li><a href="/tools/mortgage-calculator.html" class="footer__link">Mortgage Calculator</a></li>
+                        <li><a href="/tools/investment-calculator.html" class="footer__link">Investment Calculator</a></li>
+                        <li><a href="/tools/debt-payoff-calculator.html" class="footer__link">Debt Payoff Calculator</a></li>
+                        <li><a href="/tools/emergency-fund-calculator.html" class="footer__link">Emergency Fund Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Resources</h3>
+                    <ul class="footer__links">
+                        <li><a href="/credit-cards/" class="footer__link">Credit Cards</a></li>
+                        <li><a href="/saving/" class="footer__link">Saving</a></li>
+                        <li><a href="/investing/" class="footer__link">Investing</a></li>
+                        <li><a href="/taxes/" class="footer__link">Taxes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title">Company</h3>
+                    <ul class="footer__links">
+                        <li><a href="/about.html" class="footer__link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        <li><a href="/privacy.html" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer__link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2024 Personal Finance Hub. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/calculators.js"></script>
+</body>
+</html> 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planificateur de budget personnel pour suivre vos revenus et dépenses mensuels. Prenez le contrôle de vos finances.">
+    <title>Planificateur de Budget - Personal Finance Hub</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialProduct",
+        "name": "Planificateur de Budget",
+        "description": "Suivez vos revenus et dépenses pour créer un budget personnel et atteindre vos objectifs d'épargne.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Personal Finance Hub"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="/" class="breadcrumbs__link">Accueil</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="/tools/" class="breadcrumbs__link">Outils</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Planificateur de Budget</span>
+                </nav>
+
+                <div class="calculator-container">
+                    <form class="calculator-form" id="budget-planner">
+                        <h1 class="calculator-form__title">Planificateur de Budget Mensuel</h1>
+                        
+                        <div class="calculator-form__section">
+                            <h2 class="calculator-form__section-title">Revenus</h2>
+                            <div class="form__group">
+                                <label for="monthlyIncome" class="form__label">Revenu mensuel net (€)</label>
+                                <input type="number" id="monthlyIncome" name="monthlyIncome" class="form__input" required min="0">
+                            </div>
+                        </div>
+
+                        <div class="calculator-form__section">
+                            <h2 class="calculator-form__section-title">Dépenses</h2>
+                            <div class="form__row form__row--2">
+                                <div class="form__group">
+                                    <label for="housing" class="form__label">Logement</label>
+                                    <input type="number" id="housing" name="housing" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="transportation" class="form__label">Transport</label>
+                                    <input type="number" id="transportation" name="transportation" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="food" class="form__label">Alimentation</label>
+                                    <input type="number" id="food" name="food" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="utilities" class="form__label">Services publics</label>
+                                    <input type="number" id="utilities" name="utilities" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="insurance" class="form__label">Assurances</label>
+                                    <input type="number" id="insurance" name="insurance" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="entertainment" class="form__label">Loisirs</label>
+                                    <input type="number" id="entertainment" name="entertainment" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="savings" class="form__label">Épargne</label>
+                                    <input type="number" id="savings" name="savings" class="form__input" min="0">
+                                </div>
+                                <div class="form__group">
+                                    <label for="other" class="form__label">Autres</label>
+                                    <input type="number" id="other" name="other" class="form__input" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--large">Analyser mon budget</button>
+                    </form>
+
+                    <div id="budget-results" class="calculator-results-wrapper" style="display: none;">
+                        <!-- Les résultats du budget seront injectés ici -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/calculators.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... (code pour charger header/footer)
+        });
+    </script>
+</body>
+</html> 

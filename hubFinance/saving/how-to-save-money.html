@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide complet avec des astuces et stratégies pour économiser de l'argent efficacement.">
+    <title>Comment Économiser de l'Argent - Personal Finance Hub</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="/" class="breadcrumbs__link">Accueil</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="/saving/" class="breadcrumbs__link">Épargne</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Comment Économiser</span>
+                </nav>
+                <article>
+                    <h1>Comment Économiser de l'Argent : Le Guide Ultime</h1>
+                    <p>Économiser de l'argent est la première étape vers la liberté financière. Voici des stratégies concrètes pour vous aider à démarrer.</p>
+                    <h2>1. Créez un budget et suivez vos dépenses</h2>
+                    <p>La base de toute stratégie d'épargne est de savoir où va votre argent. Utilisez notre <a href="/tools/budget-planner.html">planificateur de budget</a> pour commencer.</p>
+                    <h2>2. Fixez-vous des objectifs d'épargne clairs</h2>
+                    <p>Qu'il s'agisse d'un fonds d'urgence, d'un apport pour une maison ou de la retraite, avoir un objectif vous motivera.</p>
+                    <h2>3. Automatisez votre épargne</h2>
+                    <p>Mettez en place un virement automatique vers votre compte d'épargne chaque mois. Ce que vous ne voyez pas ne vous manquera pas.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/includes/header.html').then(r => r.text()).then(d => document.getElementById('header-placeholder').innerHTML = d);
+            fetch('/includes/footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+        });
+    </script>
+</body>
+</html> 

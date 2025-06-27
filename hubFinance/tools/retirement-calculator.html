@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulateur de retraite pour estimer l'épargne nécessaire pour atteindre vos objectifs financiers à la retraite.">
+    <title>Simulateur de Retraite - Personal Finance Hub</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FinancialProduct",
+        "name": "Simulateur de Retraite",
+        "description": "Estimez votre épargne retraite future et déterminez si vous êtes sur la bonne voie pour atteindre vos objectifs.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Personal Finance Hub"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="/" class="breadcrumbs__link">Accueil</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <a href="/tools/" class="breadcrumbs__link">Outils</a>
+                    <span class="breadcrumbs__separator">/</span>
+                    <span class="breadcrumbs__current">Simulateur de Retraite</span>
+                </nav>
+
+                <div class="calculator-container">
+                    <form class="calculator-form" id="retirement-calculator">
+                        <h1 class="calculator-form__title">Simulateur de Retraite</h1>
+                        <div class="form__group">
+                            <label for="currentAge" class="form__label">Âge actuel</label>
+                            <input type="number" id="currentAge" name="currentAge" class="form__input" required min="18">
+                        </div>
+                        <div class="form__group">
+                            <label for="retirementAge" class="form__label">Âge de la retraite</label>
+                            <input type="number" id="retirementAge" name="retirementAge" class="form__input" required min="50">
+                        </div>
+                        <div class="form__group">
+                            <label for="currentSavings" class="form__label">Épargne actuelle (€)</label>
+                            <input type="number" id="currentSavings" name="currentSavings" class="form__input" required min="0">
+                        </div>
+                        <div class="form__group">
+                            <label for="monthlyContribution" class="form__label">Contribution mensuelle (€)</label>
+                            <input type="number" id="monthlyContribution" name="monthlyContribution" class="form__input" required min="0">
+                        </div>
+                        <div class="form__group">
+                            <label for="expectedReturn" class="form__label">Rendement annuel attendu (%)</label>
+                            <input type="number" id="expectedReturn" name="expectedReturn" class="form__input" required min="0" step="0.1">
+                        </div>
+                        <button type="submit" class="btn btn--primary">Calculer ma retraite</button>
+                    </form>
+                    <div id="retirement-results" class="calculator-results-wrapper" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/calculators.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... (code pour charger header/footer)
+        });
+    </script>
+</body>
+</html> 
